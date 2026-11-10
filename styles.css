@@ -376,3 +376,8 @@ dialog .button { display: flex; }
   .header .menu { margin-left: auto; }
   .header nav { top: 64px; }
 }
+
+@media (max-width: 760px) {
+  .header-contacts { flex-wrap: wrap; gap: 10px 16px; }
+  .header-messengers { flex-wrap: wrap; }
+}
