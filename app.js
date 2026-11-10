@@ -52,8 +52,8 @@ document.querySelector('#selection-form').addEventListener('submit', event => {
   const consentRecord = savePrivacyChoice('accepted', 'form');
   const consentTime = new Intl.DateTimeFormat('ru-RU', { timeZone: 'Asia/Yekaterinburg', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(consentRecord.recordedAt));
   const data = new FormData(event.target);
-  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nЖК: ${data.get('project') || 'Нужна помощь с выбором'}.\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
-  updateLink(); document.querySelector('#copy-status').textContent = ''; dialog.showModal();
+  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nЖК: ${data.get('project') || 'Нужна помощь с выбором'}.\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
+  updateLink(); document.querySelector('#copy-status').textContent = ''; document.querySelector('#selection-dialog').close(); dialog.showModal();
 });
 text.addEventListener('input', updateLink);
 document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
@@ -146,3 +146,52 @@ function restoreProject() { openProject(location.hash.slice(1), Boolean(projectS
 window.addEventListener('popstate', restoreProject);
 window.addEventListener('hashchange', restoreProject);
 restoreProject();
+
+const quizDialog = document.querySelector('#selection-dialog');
+const quizSteps = [...document.querySelectorAll('.quiz-step')];
+let quizIndex = 0;
+function showQuizStep(index, focus = true) {
+  quizIndex = index;
+  quizSteps.forEach((step, i) => { step.hidden = i !== index; });
+  document.querySelector('#quiz-progress').textContent = `Шаг ${index + 1} из ${quizSteps.length}`;
+  document.querySelector('#quiz-meter').value = index + 1;
+  document.querySelector('#quiz-back').hidden = index === 0;
+  document.querySelector('#quiz-next').hidden = index === quizSteps.length - 1;
+  quizDialog.scrollTop = 0;
+  if (focus) quizSteps[index].querySelector('h3').focus({ preventScroll: true });
+}
+document.querySelectorAll('[data-open-quiz], a[href="#selection"]').forEach(button => button.addEventListener('click', event => {
+  event.preventDefault();
+  quizDialog.showModal();
+  showQuizStep(0);
+}));
+document.querySelector('.quiz-close').addEventListener('click', () => quizDialog.close());
+document.querySelector('#quiz-next').addEventListener('click', () => showQuizStep(Math.min(quizIndex + 1, quizSteps.length - 1)));
+document.querySelector('#quiz-back').addEventListener('click', () => showQuizStep(Math.max(0, quizIndex - 1)));
+// Enter moves to the next step rather than submitting a hidden final step.
+document.querySelector('#selection-form').addEventListener('keydown', event => {
+  if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA' && quizIndex < quizSteps.length - 1) {
+    event.preventDefault(); showQuizStep(quizIndex + 1);
+  }
+});
+const mortgageForm = document.querySelector('#mortgage-form');
+const rubles = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', maximumFractionDigits: 0 });
+function calculateMortgage() {
+  const error = document.querySelector('#mortgage-error');
+  error.textContent = '';
+  const outputs = ['payment', 'principal', 'interest', 'total'];
+  const clear = () => outputs.forEach(key => { document.querySelector('#mortgage-' + key).textContent = '—'; });
+  if (!mortgageForm.checkValidity()) { clear(); return; }
+  const data = new FormData(mortgageForm);
+  const price = Number(data.get('price')), deposit = Number(data.get('deposit'));
+  const monthlyRate = Number(data.get('rate')) / 1200, months = Number(data.get('years')) * 12;
+  if (deposit >= price) { error.textContent = 'Первоначальный взнос должен быть меньше стоимости квартиры.'; clear(); return; }
+  const principal = price - deposit;
+  const payment = monthlyRate === 0 ? principal / months : principal * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months));
+  const total = payment * months;
+  const amounts = { payment, principal, interest: Math.max(0, total - principal), total };
+  outputs.forEach(key => { document.querySelector('#mortgage-' + key).textContent = rubles.format(amounts[key]); });
+}
+mortgageForm.addEventListener('submit', event => { event.preventDefault(); calculateMortgage(); });
+mortgageForm.addEventListener('input', calculateMortgage);
+calculateMortgage();

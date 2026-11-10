@@ -381,3 +381,67 @@ dialog .button { display: flex; }
   .header-contacts { flex-wrap: wrap; gap: 10px 16px; }
   .header-messengers { flex-wrap: wrap; }
 }
+
+/* Persistent contacts and compact request flow. */
+html { scroll-padding-top: 165px; }
+.header { position: sticky; top: 0; z-index: 15; background: #f2f5f9fa; max-width: none; padding-left: max(24px, calc((100% - 1264px) / 2)); padding-right: max(24px, calc((100% - 1264px) / 2)); height: auto; min-height: 110px; gap: 18px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 12px; }
+.header .brand { margin-right: auto; }
+.header nav { order: 4; width: 100%; justify-content: center; gap: 30px; }
+.header-contacts .header-contact { font-size: 21px; min-height: 0; margin: 0; display: block; }
+.header-contact span { display: none; }
+.header-messengers { font-size: 15px; gap: 18px; }
+.header-messengers a { padding: 4px 0; }
+.header-apply { font-size: 14px; padding: 14px 20px; }
+.catalog-cta { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding-top: 40px; padding-bottom: 40px; border-top: 1px solid var(--line); }
+.catalog-cta h2 { font-size: 32px; margin: 14px 0; }
+.catalog-cta p { max-width: 640px; font-size: 17px; }
+.catalog-cta>.button { flex-shrink: 0; }
+.project-catalog-note { padding-top: 28px; padding-bottom: 20px; display: flex; align-items: center; gap: 25px; }
+.project-catalog-note p { max-width: 700px; font-size: 17px; }
+.mortgage-section { padding-top: 15px; padding-bottom: 40px; }
+.mortgage-panel { background: white; border: 1px solid var(--line); border-radius: 14px; }
+.mortgage-panel summary { display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 25px 30px; list-style: none; }
+.mortgage-panel summary::-webkit-details-marker { display: none; }
+.mortgage-panel summary strong { display: block; font-size: 25px; margin-top: 6px; }
+.mortgage-toggle { font-size: 30px; }
+.mortgage-panel[open] .mortgage-toggle { transform: rotate(45deg); }
+.mortgage-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; padding: 0 30px 25px; }
+.mortgage-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.field input { display: block; width: 100%; background: var(--paper); border: 1px solid var(--line); padding: 14px; border-radius: 6px; color: var(--ink); margin-top: 8px; min-width: 0; }
+.mortgage-result { padding: 24px; background: var(--paper); border-radius: 10px; }
+#mortgage-payment { font-size: 34px; font-weight: 800; color: var(--accent); }
+.mortgage-result dl>div { display: flex; justify-content: space-between; gap: 15px; padding: 8px 0; }
+.mortgage-result dd { margin: 0; font-weight: 700; white-space: nowrap; }
+.mortgage-note { grid-column: 1/-1; font-size: 12px; color: var(--muted); margin: 0; }
+#mortgage-error { color: #a02626; }
+.quiz-dialog { width: min(600px, calc(100% - 24px)); }
+.quiz-dialog h2 { font-size: 30px; }
+.quiz-dialog progress { width: 100%; height: 7px; accent-color: var(--accent); }
+.quiz-dialog h3 { margin: 22px 0; }
+.quiz-close { position: absolute; right: 14px; top: 10px; border: 0; background: transparent; font-size: 30px; color: var(--ink); }
+.quiz-navigation { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 24px; }
+#quiz-back { border: 0; background: transparent; color: var(--ink); padding: 12px; }
+.quiz-step[hidden], .quiz-navigation button[hidden] { display: none; }
+.quiz-dialog .quiz-submit { width: 100%; margin-top: 18px; }
+@media (max-width: 760px) {
+ html { scroll-padding-top: 180px; }
+ .header { padding: 10px 20px; gap: 8px; }
+ .header .brand { font-size: 12px; }
+ .header .brand small { font-size: 7px; letter-spacing: .5px; }
+ .header .monogram { width: 36px; height: 36px; }
+ .header .menu { display: none; }
+ .header .header-apply { font-size: 11px; padding: 10px; min-height: 40px; }
+ .header-contacts { order: 3; width: 100%; justify-content: space-between; gap: 2px 12px; }
+ .header-contacts .header-contact { font-size: 18px; }
+ .header-messengers { font-size: 13px; gap: 13px; }
+ .header nav { display: none; }
+ .catalog-cta, .project-catalog-note { flex-direction: column; align-items: flex-start; gap: 10px; }
+ .catalog-cta h2 { font-size: 28px; }
+ .mortgage-body { grid-template-columns: 1fr; padding: 0 18px 20px; }
+ .mortgage-panel summary { padding: 20px 18px; }
+ .mortgage-panel summary strong { font-size: 21px; }
+ .mortgage-fields { grid-template-columns: 1fr; }
+ .mortgage-result { padding: 16px; }
+ .mortgage-result dl>div { flex-wrap: wrap; gap: 4px; }
+ .mortgage-result dd { margin-left: auto; }
+}
