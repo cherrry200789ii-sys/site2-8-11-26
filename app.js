@@ -52,7 +52,7 @@ document.querySelector('#selection-form').addEventListener('submit', event => {
   const consentRecord = savePrivacyChoice('accepted', 'form');
   const consentTime = new Intl.DateTimeFormat('ru-RU', { timeZone: 'Asia/Yekaterinburg', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(consentRecord.recordedAt));
   const data = new FormData(event.target);
-  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
+  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПервоначальный взнос: ${data.get('initial_deposit') === '' ? 'Пока не определён' : Number(data.get('initial_deposit')).toLocaleString('ru-RU') + ' ₽'}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
   updateLink(); document.querySelector('#copy-status').textContent = ''; document.querySelector('#selection-dialog').close(); dialog.showModal();
 });
 text.addEventListener('input', updateLink);
@@ -166,12 +166,18 @@ document.querySelectorAll('[data-open-quiz], a[href="#selection"]').forEach(butt
   showQuizStep(0);
 }));
 document.querySelector('.quiz-close').addEventListener('click', () => quizDialog.close());
-document.querySelector('#quiz-next').addEventListener('click', () => showQuizStep(Math.min(quizIndex + 1, quizSteps.length - 1)));
+function advanceQuiz() {
+  const fields = [...quizSteps[quizIndex].querySelectorAll('input, select, textarea')];
+  const invalid = fields.find(field => !field.checkValidity());
+  if (invalid) { invalid.reportValidity(); return; }
+  showQuizStep(Math.min(quizIndex + 1, quizSteps.length - 1));
+}
+document.querySelector('#quiz-next').addEventListener('click', advanceQuiz);
 document.querySelector('#quiz-back').addEventListener('click', () => showQuizStep(Math.max(0, quizIndex - 1)));
 // Enter moves to the next step rather than submitting a hidden final step.
 document.querySelector('#selection-form').addEventListener('keydown', event => {
   if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA' && quizIndex < quizSteps.length - 1) {
-    event.preventDefault(); showQuizStep(quizIndex + 1);
+    event.preventDefault(); advanceQuiz();
   }
 });
 const mortgageForm = document.querySelector('#mortgage-form');
