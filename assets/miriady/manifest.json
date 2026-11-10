@@ -1,0 +1,183 @@
+{
+  "source": "Презентация ЖК «Мириады», предоставлена владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура района",
+      "page": 25,
+      "width": 1900,
+      "height": 1132
+    },
+    {
+      "file": "facades.webp",
+      "category": "renders",
+      "title": "Архитектурное разнообразие",
+      "page": 9,
+      "width": 1044,
+      "height": 985
+    },
+    {
+      "file": "quarter.webp",
+      "category": "renders",
+      "title": "Квартал с высоты",
+      "page": 10,
+      "width": 1308,
+      "height": 984
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Дворовое пространство",
+      "page": 12,
+      "width": 1787,
+      "height": 984
+    },
+    {
+      "file": "children.webp",
+      "category": "renders",
+      "title": "Концепция пространства для детей",
+      "page": 13,
+      "width": 1044,
+      "height": 984
+    },
+    {
+      "file": "walkways.webp",
+      "category": "renders",
+      "title": "Прогулочные маршруты",
+      "page": 14,
+      "width": 796,
+      "height": 772
+    },
+    {
+      "file": "water.webp",
+      "category": "renders",
+      "title": "«Зеркало воды»",
+      "page": 14,
+      "width": 957,
+      "height": 578
+    },
+    {
+      "file": "landscape.webp",
+      "category": "renders",
+      "title": "Ландшафт двора",
+      "page": 15,
+      "width": 1044,
+      "height": 985
+    },
+    {
+      "file": "garden-details.webp",
+      "category": "renders",
+      "title": "Детали благоустройства",
+      "page": 16,
+      "width": 635,
+      "height": 694
+    },
+    {
+      "file": "avenue.webp",
+      "category": "renders",
+      "title": "Пространство между домами",
+      "page": 17,
+      "width": 1122,
+      "height": 1182
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Дизайн холла",
+      "page": 18,
+      "width": 759,
+      "height": 960
+    },
+    {
+      "file": "lobby-details.webp",
+      "category": "renders",
+      "title": "Свет и материалы в холле",
+      "page": 18,
+      "width": 426,
+      "height": 960
+    },
+    {
+      "file": "hall-render.webp",
+      "category": "renders",
+      "title": "Холл на этаже",
+      "page": 19,
+      "width": 737,
+      "height": 961
+    },
+    {
+      "file": "hall-interior.webp",
+      "category": "renders",
+      "title": "Интерьер общих пространств",
+      "page": 19,
+      "width": 426,
+      "height": 961
+    },
+    {
+      "file": "ground-level.webp",
+      "category": "renders",
+      "title": "Первые этажи домов",
+      "page": 23,
+      "width": 1271,
+      "height": 753
+    },
+    {
+      "file": "street.webp",
+      "category": "renders",
+      "title": "Архитектура у уровня улицы",
+      "page": 36,
+      "width": 1008,
+      "height": 1182
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Панорама квартала",
+      "page": 37,
+      "width": 1900,
+      "height": 1132
+    },
+    {
+      "file": "apartment-57-88.webp",
+      "category": "plans",
+      "title": "2+ · 57,88 м² · ГП-72.106",
+      "page": 39,
+      "width": 872,
+      "height": 625,
+      "source_clip": [
+        65.0,
+        215.0,
+        239.375,
+        340.0
+      ]
+    },
+    {
+      "file": "apartment-45-27.webp",
+      "category": "plans",
+      "title": "1+ · 45,27 м² · ГП-72.106",
+      "page": 39,
+      "width": 560,
+      "height": 741,
+      "source_clip": [
+        65.625,
+        336.875,
+        177.5,
+        485.0
+      ]
+    },
+    {
+      "file": "apartment-60-62.webp",
+      "category": "plans",
+      "title": "2+ · 60,62 м² · ГП-72.106",
+      "page": 39,
+      "width": 886,
+      "height": 604,
+      "source_clip": [
+        184.375,
+        364.375,
+        361.25,
+        485.0
+      ]
+    }
+  ]
+}

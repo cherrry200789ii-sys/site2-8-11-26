@@ -1,0 +1,183 @@
+{
+  "source": "Буклет «Айвазовский City. ГП-7, ГП-8», предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура Айвазовский City",
+      "page": 2,
+      "width": 1589,
+      "height": 1124
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Панорама проекта",
+      "page": 6,
+      "width": 1589,
+      "height": 1125
+    },
+    {
+      "file": "evening.webp",
+      "category": "renders",
+      "title": "Вечернее освещение",
+      "page": 17,
+      "width": 1589,
+      "height": 748
+    },
+    {
+      "file": "street.webp",
+      "category": "renders",
+      "title": "Архитектура у уровня улицы",
+      "page": 20,
+      "width": 795,
+      "height": 656
+    },
+    {
+      "file": "gp7-modernism.webp",
+      "category": "renders",
+      "title": "ГП-7 · модернизм",
+      "page": 25,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "gp7-international.webp",
+      "category": "renders",
+      "title": "ГП-7 · интернациональный стиль",
+      "page": 26,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "gp7-chicago.webp",
+      "category": "renders",
+      "title": "ГП-7 · чикагская школа",
+      "page": 27,
+      "width": 796,
+      "height": 1124
+    },
+    {
+      "file": "gp7-empire.webp",
+      "category": "renders",
+      "title": "ГП-7 · сталинский ампир",
+      "page": 28,
+      "width": 796,
+      "height": 1124
+    },
+    {
+      "file": "gp7-details.webp",
+      "category": "renders",
+      "title": "ГП-7 · детали архитектуры",
+      "page": 29,
+      "width": 796,
+      "height": 1124
+    },
+    {
+      "file": "gp8-first.webp",
+      "category": "renders",
+      "title": "ГП-8 · фасады первого подъезда",
+      "page": 31,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "gp8-quarter.webp",
+      "category": "renders",
+      "title": "ГП-8 · архитектура квартала",
+      "page": 32,
+      "width": 796,
+      "height": 1124
+    },
+    {
+      "file": "gp8-empire.webp",
+      "category": "renders",
+      "title": "ГП-8 · сталинский ампир",
+      "page": 33,
+      "width": 796,
+      "height": 1124
+    },
+    {
+      "file": "gp8-tower.webp",
+      "category": "renders",
+      "title": "ГП-8 · высотный акцент",
+      "page": 35,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "gp8-evening.webp",
+      "category": "renders",
+      "title": "ГП-8 · вечерний фасад",
+      "page": 37,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "gp8-facade.webp",
+      "category": "renders",
+      "title": "ГП-8 · светлые фасады",
+      "page": 38,
+      "width": 796,
+      "height": 1124
+    },
+    {
+      "file": "gp8-eclectic.webp",
+      "category": "renders",
+      "title": "ГП-8 · эклектика",
+      "page": 39,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "gp8-street.webp",
+      "category": "renders",
+      "title": "ГП-8 · первые этажи",
+      "page": 40,
+      "width": 795,
+      "height": 1124
+    },
+    {
+      "file": "apartment-65-2.webp",
+      "category": "plans",
+      "title": "2+ · 65,2 м² · ГП-7",
+      "page": 27,
+      "width": 901,
+      "height": 551,
+      "source_clip": [
+        59.375,
+        298.75,
+        239.375,
+        408.75
+      ]
+    },
+    {
+      "file": "apartment-58-3.webp",
+      "category": "plans",
+      "title": "2+ · 58,3 м² · ГП-7",
+      "page": 27,
+      "width": 739,
+      "height": 558,
+      "source_clip": [
+        238.125,
+        299.375,
+        385.625,
+        410.625
+      ]
+    },
+    {
+      "file": "apartment-41-5.webp",
+      "category": "plans",
+      "title": "1+ · 41,5 м² · ГП-7",
+      "page": 27,
+      "width": 545,
+      "height": 526,
+      "source_clip": [
+        162.5,
+        431.25,
+        271.25,
+        536.25
+      ]
+    }
+  ]
+}

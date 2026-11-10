@@ -1,0 +1,181 @@
+{
+  "source": "Презентация ЖК «Август», предоставлена владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура комплекса",
+      "page": 1,
+      "width": 1900,
+      "height": 1268
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Панорама квартала",
+      "page": 2,
+      "width": 1900,
+      "height": 904
+    },
+    {
+      "file": "facades.webp",
+      "category": "renders",
+      "title": "Фасады и озеленение",
+      "page": 3,
+      "width": 1268,
+      "height": 1900
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Дворовое пространство",
+      "page": 5,
+      "width": 1900,
+      "height": 1267
+    },
+    {
+      "file": "quarter.webp",
+      "category": "renders",
+      "title": "Внутри квартала",
+      "page": 6,
+      "width": 1900,
+      "height": 1267
+    },
+    {
+      "file": "relax.webp",
+      "category": "renders",
+      "title": "Места для отдыха",
+      "page": 6,
+      "width": 1900,
+      "height": 1267
+    },
+    {
+      "file": "facade-detail.webp",
+      "category": "renders",
+      "title": "Детали фасадов",
+      "page": 8,
+      "width": 1900,
+      "height": 1267
+    },
+    {
+      "file": "textures.webp",
+      "category": "renders",
+      "title": "Сочетание фактур",
+      "page": 9,
+      "width": 1268,
+      "height": 1900
+    },
+    {
+      "file": "entrance.webp",
+      "category": "renders",
+      "title": "Входная группа",
+      "page": 10,
+      "width": 1267,
+      "height": 1900
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Дизайн парадной",
+      "page": 10,
+      "width": 1900,
+      "height": 1267
+    },
+    {
+      "file": "bedroom.webp",
+      "category": "renders",
+      "title": "Визуализация спальни",
+      "page": 14,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "living-room.webp",
+      "category": "renders",
+      "title": "Визуализация кухни-гостиной",
+      "page": 16,
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "living-interior.webp",
+      "category": "renders",
+      "title": "Визуализация гостиной",
+      "page": 17,
+      "width": 1900,
+      "height": 1266
+    },
+    {
+      "file": "family-bedroom.webp",
+      "category": "renders",
+      "title": "Визуализация семейной спальни",
+      "page": 19,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "room.webp",
+      "category": "renders",
+      "title": "Визуализация комнаты",
+      "page": 21,
+      "width": 1122,
+      "height": 1402
+    },
+    {
+      "file": "interior.webp",
+      "category": "renders",
+      "title": "Визуализация интерьера",
+      "page": 22,
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "file": "plan-one-room-65-6.webp",
+      "category": "plans",
+      "title": "1-комнатная · 65,6 м²",
+      "page": 14,
+      "width": 1611,
+      "height": 1557
+    },
+    {
+      "file": "plan-two-room-68-2.webp",
+      "category": "plans",
+      "title": "2-комнатная · 68,2 м²",
+      "page": 16,
+      "width": 1611,
+      "height": 1557
+    },
+    {
+      "file": "plan-two-room-63.webp",
+      "category": "plans",
+      "title": "2-комнатная · 63,0 м²",
+      "page": 17,
+      "width": 1611,
+      "height": 1557
+    },
+    {
+      "file": "plan-three-room-81-7.webp",
+      "category": "plans",
+      "title": "3-комнатная · 81,7 м²",
+      "page": 19,
+      "width": 1611,
+      "height": 1557
+    },
+    {
+      "file": "plan-two-room-68.webp",
+      "category": "plans",
+      "title": "2-комнатная · 68,0 м²",
+      "page": 21,
+      "width": 1611,
+      "height": 1557
+    },
+    {
+      "file": "plan-three-room-84-9.webp",
+      "category": "plans",
+      "title": "3-комнатная · 84,9 м²",
+      "page": 22,
+      "width": 1611,
+      "height": 1557
+    }
+  ]
+}

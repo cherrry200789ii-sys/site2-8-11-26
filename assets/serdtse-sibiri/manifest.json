@@ -1,0 +1,237 @@
+{
+  "source": "Презентация «Сердце Сибири», предоставлена владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура комплекса",
+      "page": 17,
+      "width": 1692,
+      "height": 1540
+    },
+    {
+      "file": "night-architecture.webp",
+      "category": "renders",
+      "title": "Архитектурная подсветка",
+      "page": 18,
+      "width": 1692,
+      "height": 2064
+    },
+    {
+      "file": "completed-building.webp",
+      "category": "photos",
+      "title": "Готовый дом",
+      "page": 19,
+      "width": 1692,
+      "height": 2064
+    },
+    {
+      "file": "courtyard-project.webp",
+      "category": "renders",
+      "title": "Двор: проект",
+      "page": 20,
+      "width": 1692,
+      "height": 1207
+    },
+    {
+      "file": "courtyard-photo.webp",
+      "category": "photos",
+      "title": "Двор: реализация",
+      "page": 20,
+      "width": 1692,
+      "height": 1207
+    },
+    {
+      "file": "evening-project.webp",
+      "category": "renders",
+      "title": "Вечерний двор: проект",
+      "page": 21,
+      "width": 1692,
+      "height": 1207
+    },
+    {
+      "file": "evening-photo.webp",
+      "category": "photos",
+      "title": "Вечерний двор: реализация",
+      "page": 21,
+      "width": 1692,
+      "height": 1207
+    },
+    {
+      "file": "boulevard.webp",
+      "category": "renders",
+      "title": "Бульвар «Тропа Сибири»",
+      "page": 22,
+      "width": 1692,
+      "height": 1542
+    },
+    {
+      "file": "private-courtyard.webp",
+      "category": "renders",
+      "title": "Закрытый двор",
+      "page": 25,
+      "width": 1691,
+      "height": 1542
+    },
+    {
+      "file": "entrance.webp",
+      "category": "renders",
+      "title": "Дизайнерская парадная",
+      "page": 29,
+      "width": 1692,
+      "height": 1968
+    },
+    {
+      "file": "ecologists.webp",
+      "category": "renders",
+      "title": "Квартал экологов",
+      "page": 39,
+      "width": 1692,
+      "height": 1617
+    },
+    {
+      "file": "ecologists-courtyard.webp",
+      "category": "renders",
+      "title": "Двор квартала экологов",
+      "page": 40,
+      "width": 1692,
+      "height": 1693
+    },
+    {
+      "file": "ecologists-entrance.webp",
+      "category": "renders",
+      "title": "Парадная квартала экологов",
+      "page": 43,
+      "width": 1692,
+      "height": 1693
+    },
+    {
+      "file": "engineers.webp",
+      "category": "renders",
+      "title": "Квартал инженеров",
+      "page": 46,
+      "width": 1696,
+      "height": 1621
+    },
+    {
+      "file": "engineers-playground.webp",
+      "category": "renders",
+      "title": "Игровое пространство квартала инженеров",
+      "page": 47,
+      "width": 1692,
+      "height": 1693
+    },
+    {
+      "file": "engineers-garden.webp",
+      "category": "renders",
+      "title": "Озеленение квартала инженеров",
+      "page": 48,
+      "width": 1692,
+      "height": 1693
+    },
+    {
+      "file": "engineers-entrance.webp",
+      "category": "renders",
+      "title": "Парадная квартала инженеров",
+      "page": 50,
+      "width": 1692,
+      "height": 1693
+    },
+    {
+      "file": "terrace-interior.webp",
+      "category": "renders",
+      "title": "Интерьер квартиры с террасой",
+      "page": 81,
+      "width": 1692,
+      "height": 1531
+    },
+    {
+      "file": "plan-studio.webp",
+      "category": "plans",
+      "title": "Студия",
+      "page": 78,
+      "width": 720,
+      "height": 954
+    },
+    {
+      "file": "plan-one-room.webp",
+      "category": "plans",
+      "title": "Однокомнатная квартира",
+      "page": 78,
+      "width": 909,
+      "height": 792
+    },
+    {
+      "file": "plan-two-room.webp",
+      "category": "plans",
+      "title": "Двухкомнатная квартира",
+      "page": 79,
+      "width": 774,
+      "height": 954
+    },
+    {
+      "file": "plan-three-room.webp",
+      "category": "plans",
+      "title": "Трёхкомнатная квартира",
+      "page": 79,
+      "width": 918,
+      "height": 990
+    },
+    {
+      "file": "plan-four-room.webp",
+      "category": "plans",
+      "title": "Четырёхкомнатная квартира",
+      "page": 80,
+      "width": 1026,
+      "height": 720
+    },
+    {
+      "file": "plan-terrace.webp",
+      "category": "plans",
+      "title": "Квартира с террасой",
+      "page": 81,
+      "width": 1017,
+      "height": 756
+    },
+    {
+      "file": "plan-master-bedroom.webp",
+      "category": "plans",
+      "title": "Квартира с мастер-спальней",
+      "page": 82,
+      "width": 1017,
+      "height": 792
+    },
+    {
+      "file": "plan-dressing-room.webp",
+      "category": "plans",
+      "title": "Квартира с гардеробной",
+      "page": 83,
+      "width": 1017,
+      "height": 792
+    },
+    {
+      "file": "plan-loggia.webp",
+      "category": "plans",
+      "title": "Квартира с лоджией",
+      "page": 84,
+      "width": 1017,
+      "height": 792
+    },
+    {
+      "file": "plan-balcony.webp",
+      "category": "plans",
+      "title": "Квартира с балконом",
+      "page": 85,
+      "width": 1017,
+      "height": 792
+    },
+    {
+      "file": "plan-panoramic.webp",
+      "category": "plans",
+      "title": "Квартира с панорамными окнами",
+      "page": 86,
+      "width": 1017,
+      "height": 792
+    }
+  ]
+}
