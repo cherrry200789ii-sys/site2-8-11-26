@@ -52,7 +52,7 @@ document.querySelector('#selection-form').addEventListener('submit', event => {
   const consentRecord = savePrivacyChoice('accepted', 'form');
   const consentTime = new Intl.DateTimeFormat('ru-RU', { timeZone: 'Asia/Yekaterinburg', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(consentRecord.recordedAt));
   const data = new FormData(event.target);
-  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПервоначальный взнос: ${data.get('initial_deposit') === '' ? 'Пока не определён' : Number(data.get('initial_deposit')).toLocaleString('ru-RU') + ' ₽'}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
+  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nИмя: ${data.get('client_name').trim()}.\nТелефон: ${data.get('client_phone').trim()}.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПервоначальный взнос: ${data.get('initial_deposit') === '' ? 'Пока не определён' : Number(data.get('initial_deposit')).toLocaleString('ru-RU') + ' ₽'}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
   updateLink(); document.querySelector('#copy-status').textContent = ''; document.querySelector('#selection-dialog').close(); dialog.showModal();
 });
 text.addEventListener('input', updateLink);
@@ -201,3 +201,14 @@ function calculateMortgage() {
 mortgageForm.addEventListener('submit', event => { event.preventDefault(); calculateMortgage(); });
 mortgageForm.addEventListener('input', calculateMortgage);
 calculateMortgage();
+
+const clientName = document.querySelector('[name="client_name"]');
+const clientPhone = document.querySelector('[name="client_phone"]');
+clientName.addEventListener('input', () => {
+  clientName.setCustomValidity(clientName.value && !clientName.value.trim() ? 'Укажите, как к вам обращаться.' : '');
+});
+clientPhone.addEventListener('input', () => {
+  const digits = clientPhone.value.replace(/\D/g, '');
+  const allowed = /^[+0-9()\s-]*$/.test(clientPhone.value);
+  clientPhone.setCustomValidity(clientPhone.value && (!allowed || digits.length < 10 || digits.length > 15) ? 'Введите номер телефона: от 10 до 15 цифр.' : '');
+});
