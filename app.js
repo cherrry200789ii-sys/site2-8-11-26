@@ -49,10 +49,9 @@ document.querySelector('#selection-form').addEventListener('submit', event => {
   event.preventDefault();
   const consent = document.querySelector('#request-consent');
   if (!consent.checked) { consent.reportValidity(); return; }
-  const consentRecord = savePrivacyChoice('accepted', 'form');
-  const consentTime = new Intl.DateTimeFormat('ru-RU', { timeZone: 'Asia/Yekaterinburg', dateStyle: 'short', timeStyle: 'medium' }).format(new Date(consentRecord.recordedAt));
+  savePrivacyChoice('accepted', 'form');
   const data = new FormData(event.target);
-  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nИмя: ${data.get('client_name').trim()}.\nТелефон: ${data.get('client_phone').trim()}.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПервоначальный взнос: ${data.get('initial_deposit') === '' ? 'Пока не определён' : Number(data.get('initial_deposit')).toLocaleString('ru-RU') + ' ₽'}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.\n\nСогласие ИП Седенкову Михаилу Витальевичу на обработку персональных данных для ответа на обращение и подбора недвижимости дано отдельной отметкой в форме. Версия: ${CONSENT_VERSION}. Дата: ${consentTime} (UTC+5).`;
+  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nИмя: ${data.get('client_name').trim()}.\nТелефон: ${data.get('client_phone').trim()}.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПервоначальный взнос: ${data.get('initial_deposit') === '' ? 'Пока не определён' : Number(data.get('initial_deposit')).toLocaleString('ru-RU') + ' ₽'}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.`;
   updateLink(); document.querySelector('#copy-status').textContent = ''; document.querySelector('#selection-dialog').close(); dialog.showModal();
 });
 text.addEventListener('input', updateLink);
