@@ -39,27 +39,34 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false');
   menu.setAttribute('aria-label', 'Открыть меню');
 }));
-const dialog = document.querySelector('#request-dialog');
-const text = document.querySelector('#request-text');
-const send = document.querySelector('#send-request');
-function updateLink() {
-  send.href = 'https://t.me/Aleksandra_Sed?text=' + encodeURIComponent(text.value);
-}
-document.querySelector('#selection-form').addEventListener('submit', event => {
+let submittingLead = false;
+document.querySelector('#selection-form').addEventListener('submit', async event => {
   event.preventDefault();
+  const form = event.target;
   const consent = document.querySelector('#request-consent');
-  if (!consent.checked) { consent.reportValidity(); return; }
+  if (submittingLead || !form.reportValidity() || !consent.checked) return;
+  const button = document.querySelector('.quiz-submit');
+  const status = document.querySelector('#submission-status');
+  submittingLead = true; button.disabled = true;
+  button.textContent = 'Отправляем…';
+  status.textContent = '';
   savePrivacyChoice('accepted', 'form');
-  const data = new FormData(event.target);
-  text.value = `Александра, здравствуйте! Хочу подобрать квартиру в новостройке Тюмени.\n\nИмя: ${data.get('client_name').trim()}.\nТелефон: ${data.get('client_phone').trim()}.\n\nКомнаты: ${data.get('rooms')}.\nБюджет: ${data.get('budget')}.\nПервоначальный взнос: ${data.get('initial_deposit') === '' ? 'Пока не определён' : Number(data.get('initial_deposit')).toLocaleString('ru-RU') + ' ₽'}.\nРайон: ${data.get('district').trim() || 'Нужна помощь с выбором'}.\nСпособ покупки: ${data.get('financing')}.\nПереезд: ${data.get('timing')}.${data.get('wishes').trim() ? '\nПожелания: ' + data.get('wishes').trim() : ''}\n\nРасскажите, пожалуйста, об условиях вашей работы.`;
-  updateLink(); document.querySelector('#copy-status').textContent = ''; document.querySelector('#selection-dialog').close(); dialog.showModal();
-});
-text.addEventListener('input', updateLink);
-document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if(event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
-document.querySelector('#copy-request').addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText(text.value); document.querySelector('#copy-status').textContent = 'Текст скопирован. Его можно вставить в чат с Александрой.'; }
-  catch { text.focus(); text.select(); document.querySelector('#copy-status').textContent = 'Выделен текст запроса — скопируйте его вручную.'; }
+  try {
+    const response = await fetch('api/lead.php', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form))),
+    });
+    const result = await response.json();
+    if (!response.ok || result.ok !== true) throw new Error(result.message || 'Не удалось подтвердить отправку.');
+    status.textContent = 'Заявка отправлена Александре. Спасибо за обращение!';
+    form.reset();
+  } catch (error) {
+    status.textContent = 'Заявка не отправлена. ' + (error instanceof SyntaxError || error instanceof TypeError ? 'Свяжитесь с Александрой по ссылкам в шапке сайта.' : error.message);
+  } finally {
+    submittingLead = false;
+    button.disabled = !consent.checked;
+    button.textContent = 'Отправить заявку';
+  }
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
 
@@ -152,6 +159,7 @@ let quizIndex = 0;
 let selectionPromptShown = false;
 function showQuizStep(index, focus = true) {
   quizIndex = index;
+  if (index === 0) document.querySelector('#submission-status').textContent = '';
   if (index === 0) {
     document.querySelector('#request-consent').checked = false;
     document.querySelector('.quiz-submit').disabled = true;
@@ -244,5 +252,5 @@ offerSelectionAfterIntroduction();
 
 const requestConsent = document.querySelector('#request-consent');
 requestConsent.addEventListener('change', () => {
-  document.querySelector('.quiz-submit').disabled = !requestConsent.checked;
+  document.querySelector('.quiz-submit').disabled = submittingLead || !requestConsent.checked;
 });
