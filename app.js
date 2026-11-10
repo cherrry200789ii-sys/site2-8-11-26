@@ -110,3 +110,39 @@ moreReviews.addEventListener('click', () => {
   moreReviews.setAttribute('aria-expanded', 'true');
   moreReviews.hidden = true;
 });
+
+// Keep project presentations collapsed until a visitor chooses a project.
+const projectSections = [...document.querySelectorAll('.siberia-section')];
+function openProject(id, scroll = true) {
+  const selected = projectSections.find(section => section.id === id);
+  projectSections.forEach(section => {
+    section.hidden = section !== selected;
+    document.querySelectorAll(`a[href="#${section.id}"]`).forEach(link => {
+      link.setAttribute('aria-expanded', String(section === selected));
+      link.setAttribute('aria-controls', section.id);
+    });
+  });
+  if (selected && scroll) selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+projectSections.forEach(section => {
+  document.querySelectorAll(`a[href="#${section.id}"]`).forEach(link => {
+    link.setAttribute('aria-expanded', 'false');
+    link.setAttribute('aria-controls', section.id);
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      history.pushState(null, '', '#' + section.id);
+      openProject(section.id);
+    });
+  });
+  section.querySelector('.project-close').addEventListener('click', () => {
+    openProject('');
+    history.replaceState(null, '', '#projects');
+    const link = document.querySelector(`a[href="#${section.id}"]`);
+    link.focus({ preventScroll: true });
+    link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+function restoreProject() { openProject(location.hash.slice(1), Boolean(projectSections.find(section => '#' + section.id === location.hash))); }
+window.addEventListener('popstate', restoreProject);
+window.addEventListener('hashchange', restoreProject);
+restoreProject();
