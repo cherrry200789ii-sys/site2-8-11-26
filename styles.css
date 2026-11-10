@@ -445,3 +445,6 @@ html { scroll-padding-top: 165px; }
  .mortgage-result dl>div { flex-wrap: wrap; gap: 4px; }
  .mortgage-result dd { margin-left: auto; }
 }
+
+.project-card .project-price { font-size: 20px; font-weight: 750; color: var(--accent); margin: 6px 0 14px; min-height: 0; }
+.project-price span { font-size: 16px; font-weight: 500; color: var(--muted); }

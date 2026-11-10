@@ -67,7 +67,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 document.querySelectorAll('.siberia-section').forEach(section => {
   const figures = [...section.querySelectorAll('.siberia-figure')];
   const more = section.querySelector('.gallery-more');
-  let category = 'renders';
+  let category = 'plans';
   let limit = 6;
   function renderGallery() {
     let count = 0;
