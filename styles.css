@@ -456,3 +456,8 @@ html { scroll-padding-top: 165px; }
 .room-options { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
 .room-options .choices span { border: 0; background: var(--soft); }
 .room-options .choices input:checked + span { background: var(--graphite); color: white; }
+
+.project-card .project-image-link { display: block; padding: 0; margin: 0; border: 0; overflow: hidden; border-radius: 8px; }
+.project-image-link .project-preview { display: block; transition: transform .2s ease; }
+.project-image-link:hover .project-preview { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) { .project-image-link .project-preview { transition: none; } }
