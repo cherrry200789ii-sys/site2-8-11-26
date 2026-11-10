@@ -452,3 +452,7 @@ html { scroll-padding-top: 165px; }
 .project-price span { font-size: 16px; font-weight: 500; color: var(--muted); }
 
 .quiz-submit:disabled { opacity: .45; cursor: not-allowed; }
+
+.room-options { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
+.room-options .choices span { border: 0; background: var(--soft); }
+.room-options .choices input:checked + span { background: var(--graphite); color: white; }
