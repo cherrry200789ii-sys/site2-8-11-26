@@ -150,6 +150,7 @@ restoreProject();
 const quizDialog = document.querySelector('#selection-dialog');
 const quizSteps = [...document.querySelectorAll('.quiz-step')];
 let quizIndex = 0;
+let selectionPromptShown = false;
 function showQuizStep(index, focus = true) {
   quizIndex = index;
   quizSteps.forEach((step, i) => { step.hidden = i !== index; });
@@ -162,6 +163,7 @@ function showQuizStep(index, focus = true) {
 }
 document.querySelectorAll('[data-open-quiz], a[href="#selection"]').forEach(button => button.addEventListener('click', event => {
   event.preventDefault();
+  selectionPromptShown = true;
   quizDialog.showModal();
   showQuizStep(0);
 }));
@@ -212,3 +214,27 @@ clientPhone.addEventListener('input', () => {
   const allowed = /^[+0-9()\s-]*$/.test(clientPhone.value);
   clientPhone.setCustomValidity(clientPhone.value && (!allowed || digits.length < 10 || digits.length > 15) ? 'Введите номер телефона: от 10 до 15 цифр.' : '');
 });
+
+// Offer the selection once, after the introduction has been read.
+const introduction = document.querySelector('#approach');
+let introductionSeen = false;
+let introductionPassed = false;
+let previousScroll = window.scrollY;
+function offerSelectionAfterIntroduction() {
+  const headerBottom = document.querySelector('.header').getBoundingClientRect().bottom;
+  const rect = introduction.getBoundingClientRect();
+  const scrollingDown = window.scrollY > previousScroll;
+  previousScroll = window.scrollY;
+  if (rect.top < window.innerHeight && rect.bottom > headerBottom) introductionSeen = true;
+  if (introductionSeen && scrollingDown && rect.bottom <= headerBottom) introductionPassed = true;
+  if (!introductionPassed || selectionPromptShown || !privacyBanner.hidden || document.querySelector('dialog[open]')) return;
+  selectionPromptShown = true;
+  quizDialog.showModal();
+  showQuizStep(0);
+}
+window.addEventListener('scroll', offerSelectionAfterIntroduction, { passive: true });
+window.addEventListener('resize', offerSelectionAfterIntroduction);
+document.querySelectorAll('#privacy-accept, #privacy-decline').forEach(button => {
+  button.addEventListener('click', offerSelectionAfterIntroduction);
+});
+offerSelectionAfterIntroduction();
