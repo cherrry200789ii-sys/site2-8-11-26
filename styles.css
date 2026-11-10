@@ -362,3 +362,17 @@ dialog .button { display: flex; }
 .intro-section, .projects, .steps { padding-top: 48px; padding-bottom: 48px; }
 .about-portrait img { background: white; }
 @media (max-width: 700px) { .steps-grid { grid-template-columns: 1fr; } .intro-section, .projects, .steps { padding-top: 32px; padding-bottom: 32px; } }
+
+.header-contacts { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; flex-shrink: 0; }
+.header-messengers { display: flex; gap: 14px; font-size: 12px; font-weight: 650; color: var(--accent); }
+.header-messengers a { text-decoration: underline; text-underline-offset: 4px; }
+.header-messengers a:hover { color: var(--navy); }
+@media (max-width: 760px) {
+  .header { height: auto; min-height: 112px; flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px; }
+  .header-contacts { order: 3; width: 100%; flex-direction: row; align-items: center; justify-content: space-between; }
+  .header-contacts .header-contact { font-size: 12px; display: block; min-height: 0; margin: 0; }
+  .header-contacts .header-contact span { display: none; }
+  .header-messengers { font-size: 12px; gap: 12px; }
+  .header .menu { margin-left: auto; }
+  .header nav { top: 64px; }
+}
