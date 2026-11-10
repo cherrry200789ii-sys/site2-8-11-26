@@ -153,6 +153,10 @@ let quizIndex = 0;
 let selectionPromptShown = false;
 function showQuizStep(index, focus = true) {
   quizIndex = index;
+  if (index === 0) {
+    document.querySelector('#request-consent').checked = false;
+    document.querySelector('.quiz-submit').disabled = true;
+  }
   quizSteps.forEach((step, i) => { step.hidden = i !== index; });
   document.querySelector('#quiz-progress').textContent = `Шаг ${index + 1} из ${quizSteps.length}`;
   document.querySelector('#quiz-meter').value = index + 1;
@@ -238,3 +242,8 @@ document.querySelectorAll('#privacy-accept, #privacy-decline').forEach(button =>
   button.addEventListener('click', offerSelectionAfterIntroduction);
 });
 offerSelectionAfterIntroduction();
+
+const requestConsent = document.querySelector('#request-consent');
+requestConsent.addEventListener('change', () => {
+  document.querySelector('.quiz-submit').disabled = !requestConsent.checked;
+});
