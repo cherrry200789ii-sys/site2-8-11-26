@@ -58,7 +58,7 @@ document.querySelector('#selection-form').addEventListener('submit', async event
     });
     const result = await response.json();
     if (!response.ok || result.ok !== true) throw new Error(result.message || 'Не удалось подтвердить отправку.');
-    status.textContent = 'Заявка отправлена Александре. Спасибо за обращение!';
+    status.textContent = 'Заявка принята и передана почтовой службе. Спасибо за обращение!';
     form.reset();
   } catch (error) {
     status.textContent = 'Заявка не отправлена. ' + (error instanceof SyntaxError || error instanceof TypeError ? 'Свяжитесь с Александрой по ссылкам в шапке сайта.' : error.message);

@@ -1,5 +1,5 @@
 <?php
-// Compatible with PHP 7.1+. Keep credentials outside public_html.
+// Compatible with PHP 7.1+. Uses the hosting mail service; bot credentials are not read.
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 function respond($status, $body) { http_response_code($status); echo json_encode($body, JSON_UNESCAPED_UNICODE); exit; }
@@ -18,52 +18,19 @@ function field($data, $key, $max) {
 $name = field($data, 'client_name', 320); $phone = field($data, 'client_phone', 100);
 $digits = preg_replace('/\D/', '', $phone);
 if ($name === '' || !preg_match('/^[+0-9()\s-]+$/', $phone) || strlen($digits) < 10 || strlen($digits) > 15) respond(422, ['ok'=>false, 'message'=>'Укажите имя и корректный телефон.']);
-$channel = field($data, 'delivery_channel', 16);
-if (!in_array($channel, ['telegram', 'max'], true)) respond(422, ['ok'=>false, 'message'=>'Выберите Telegram или MAX.']);
-$configPath = dirname(__DIR__, 2) . '/sedenkova-leads.php';
-if (!is_file($configPath)) respond(503, ['ok'=>false, 'message'=>'Автоматическая отправка пока не подключена. Свяжитесь с Александрой по ссылкам в шапке сайта.']);
-$config = require $configPath;
-$destination = is_array($config) ? ($config[$channel] ?? []) : [];
-$token = trim((string)($destination['token'] ?? '')); $chatId = trim((string)($destination['chat_id'] ?? ''));
-if (!$token || !$chatId || !function_exists('curl_init')) respond(503, ['ok'=>false, 'message'=>'Отправка в выбранный мессенджер пока не подключена.']);
 $text = "Заявка с сайта\nИмя: " . $name . "\nТелефон: " . $phone;
 $labels = ['rooms'=>'Комнаты', 'budget'=>'Бюджет', 'initial_deposit'=>'Первоначальный взнос, ₽', 'district'=>'Район', 'financing'=>'Способ покупки', 'timing'=>'Переезд', 'wishes'=>'Пожелания'];
 foreach ($labels as $key=>$label) { $value = field($data, $key, $key === 'wishes' ? 2000 : 500); $text .= "\n" . $label . ': ' . ($value === '' ? 'Не указано' : $value); }
-$url = $channel === 'telegram' ? 'https://api.telegram.org/bot' . $token . '/sendMessage' : 'https://platform-api.max.ru/messages?chat_id=' . rawurlencode((string)$chatId);
-$payload = ['text'=>$text]; if ($channel === 'telegram') $payload['chat_id'] = $chatId;
-$headers = ['Content-Type: application/json']; if ($channel === 'max') $headers[] = 'Authorization: ' . $token;
-$curl = curl_init($url);
-curl_setopt_array($curl, [CURLOPT_POST=>true, CURLOPT_POSTFIELDS=>json_encode($payload, JSON_UNESCAPED_UNICODE), CURLOPT_HTTPHEADER=>$headers, CURLOPT_RETURNTRANSFER=>true, CURLOPT_CONNECTTIMEOUT=>5, CURLOPT_TIMEOUT=>15]);
-$result = curl_exec($curl); $curlCode = curl_errno($curl); $status = curl_getinfo($curl, CURLINFO_HTTP_CODE); curl_close($curl);
-$reply = is_string($result) ? json_decode($result, true) : null;
-$delivered = $status >= 200 && $status < 300 && is_array($reply) && ($channel === 'telegram' ? !empty($reply['ok']) : !empty($reply['message']['body']['mid']));
-if (!$delivered) {
-    // Only fixed diagnostic messages are returned. Never expose tokens, URLs or raw API errors.
-    $code = 'DELIVERY_UNCONFIRMED';
-    $message = 'Не удалось подтвердить доставку сообщения.';
-    if ($curlCode) {
-        $code = 'CONNECTION_FAILED';
-        $message = 'Хостинг не смог подключиться к мессенджеру. Код соединения: ' . (int)$curlCode . '.';
-    } elseif ($channel === 'telegram') {
-        $apiCode = is_array($reply) ? (int)($reply['error_code'] ?? $status) : (int)$status;
-        $description = is_array($reply) ? strtolower((string)($reply['description'] ?? '')) : '';
-        if ($apiCode === 401 || $apiCode === 404) {
-            $code = 'BOT_TOKEN_INVALID';
-            $message = 'Telegram не принял токен бота. Проверьте token в настройках отправки.';
-        } elseif ($apiCode === 403) {
-            $code = 'BOT_CHAT_FORBIDDEN';
-            $message = 'Боту запрещено писать в указанный чат. Откройте своего бота, нажмите Start и проверьте chat_id.';
-        } elseif ($apiCode === 400 && strpos($description, 'chat not found') !== false) {
-            $code = 'BOT_CHAT_NOT_FOUND';
-            $message = 'Telegram не нашёл чат получателя. Проверьте chat_id и нажмите Start в своём боте.';
-        } elseif ($apiCode === 429) {
-            $code = 'BOT_RATE_LIMIT';
-            $message = 'Telegram временно ограничил отправку. Повторите попытку позднее.';
-        } else {
-            $code = 'TELEGRAM_REJECTED';
-            $message = 'Telegram не подтвердил отправку. Код ответа: ' . $apiCode . '.';
-        }
-    }
-    respond(502, ['ok'=>false, 'code'=>$code, 'message'=>$message]);
-}
-respond(200, ['ok'=>true]);
+// The recipient and sender are fixed server-side, never supplied by the visitor.
+$recipient = 'cherrry207@rambler.ru';
+$sender = 'no-reply@novostroyki-tyumen72.ru';
+$subject = '=?UTF-8?B?' . base64_encode('Новая заявка на подбор квартиры') . '?=';
+$headers = "From: " . $sender . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "Content-Transfer-Encoding: base64\r\n";
+if (!function_exists('mail')) respond(503, ['ok'=>false, 'message'=>'Почтовая отправка на хостинге недоступна. Свяжитесь с Александрой по ссылкам в шапке.']);
+$accepted = @mail($recipient, $subject, chunk_split(base64_encode($text)), $headers);
+if (!$accepted) respond(502, ['ok'=>false, 'message'=>'Хостинг не принял письмо к отправке. Попробуйте позже или свяжитесь с Александрой по ссылкам в шапке.']);
+// mail() confirms acceptance by the local mail service, not delivery to the inbox.
+respond(200, ['ok'=>true, 'message'=>'Заявка принята и передана почтовой службе. Спасибо за обращение!']);
