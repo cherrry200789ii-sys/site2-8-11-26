@@ -1,0 +1,54 @@
+{
+  "source": "Futuro_моб.pdf — презентация, предоставленная владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура в вечернем свете",
+      "page": 1,
+      "width": 1299,
+      "height": 1900
+    },
+    {
+      "file": "tower.webp",
+      "category": "renders",
+      "title": "Архитектура башни",
+      "page": 3,
+      "width": 1078,
+      "height": 1498
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Панорама комплекса",
+      "page": 3,
+      "width": 1900,
+      "height": 1187
+    },
+    {
+      "file": "welcome.webp",
+      "category": "renders",
+      "title": "Входная зона и первые этажи",
+      "page": 4,
+      "width": 1900,
+      "height": 1188
+    },
+    {
+      "file": "stylobate.webp",
+      "category": "renders",
+      "title": "Благоустройство стилобата",
+      "page": 4,
+      "width": 1560,
+      "height": 976
+    },
+    {
+      "file": "interior.webp",
+      "category": "renders",
+      "title": "Пример дизайн-проекта спальни",
+      "page": 5,
+      "width": 1604,
+      "height": 1070
+    }
+  ],
+  "plans": "В предоставленном PDF схемы планировок квартир отсутствуют."
+}
