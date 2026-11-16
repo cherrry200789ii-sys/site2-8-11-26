@@ -123,7 +123,7 @@ function openProject(id, scroll = true) {
   const selected = projectSections.find(section => section.id === id);
   projectSections.forEach(section => {
     section.hidden = section !== selected;
-    document.querySelectorAll(`a[href="#${section.id}"]`).forEach(link => {
+    document.querySelectorAll(`a[href="#${section.id}"]:not(.map-project-link)`).forEach(link => {
       link.setAttribute('aria-expanded', String(section === selected));
       link.setAttribute('aria-controls', section.id);
     });
@@ -131,7 +131,7 @@ function openProject(id, scroll = true) {
   if (selected && scroll) selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 projectSections.forEach(section => {
-  document.querySelectorAll(`a[href="#${section.id}"]`).forEach(link => {
+  document.querySelectorAll(`a[href="#${section.id}"]:not(.map-project-link)`).forEach(link => {
     link.setAttribute('aria-expanded', 'false');
     link.setAttribute('aria-controls', section.id);
     link.addEventListener('click', event => {
