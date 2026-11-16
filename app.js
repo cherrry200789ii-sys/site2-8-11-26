@@ -254,3 +254,21 @@ const requestConsent = document.querySelector('#request-consent');
 requestConsent.addEventListener('change', () => {
   document.querySelector('.quiz-submit').disabled = submittingLead || !requestConsent.checked;
 });
+
+// A separate reminder near the FAQ, once per page visit.
+const faqSection = document.querySelector('.faq');
+let faqPromptShown = false;
+let previousFaqScroll = window.scrollY;
+function offerSelectionNearFaq() {
+  const scrollingDown = window.scrollY > previousFaqScroll;
+  previousFaqScroll = window.scrollY;
+  if (!faqSection || faqPromptShown || !scrollingDown || submittingLead || !privacyBanner.hidden || document.querySelector('dialog[open]')) return;
+  const rect = faqSection.getBoundingClientRect();
+  const headerBottom = document.querySelector('.header').getBoundingClientRect().bottom;
+  if (rect.top > window.innerHeight * 0.65 || rect.bottom <= headerBottom) return;
+  faqPromptShown = true;
+  selectionPromptShown = true;
+  quizDialog.showModal();
+  showQuizStep(0);
+}
+window.addEventListener('scroll', offerSelectionNearFaq, { passive: true });
