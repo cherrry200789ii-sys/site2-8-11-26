@@ -264,8 +264,7 @@ function offerSelectionNearFaq() {
   previousFaqScroll = window.scrollY;
   if (!faqSection || faqPromptShown || !scrollingDown || submittingLead || !privacyBanner.hidden || document.querySelector('dialog[open]')) return;
   const rect = faqSection.getBoundingClientRect();
-  const headerBottom = document.querySelector('.header').getBoundingClientRect().bottom;
-  if (rect.top > window.innerHeight * 0.65 || rect.bottom <= headerBottom) return;
+  if (rect.top > window.innerHeight * 0.65) return;
   faqPromptShown = true;
   selectionPromptShown = true;
   quizDialog.showModal();
