@@ -1,0 +1,229 @@
+{
+  "source": "Аква_презентация.pdf — предоставлена владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура комплекса",
+      "page": 4,
+      "width": 1900,
+      "height": 714
+    },
+    {
+      "file": "riverside.webp",
+      "category": "renders",
+      "title": "Архитектура у реки",
+      "page": 5,
+      "width": 1752,
+      "height": 981
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Двор с высоты",
+      "page": 11,
+      "width": 1900,
+      "height": 962
+    },
+    {
+      "file": "gazebo.webp",
+      "category": "renders",
+      "title": "Места для отдыха",
+      "page": 12,
+      "width": 580,
+      "height": 807
+    },
+    {
+      "file": "playground.webp",
+      "category": "renders",
+      "title": "Игровое пространство",
+      "page": 12,
+      "width": 560,
+      "height": 807
+    },
+    {
+      "file": "facades.webp",
+      "category": "renders",
+      "title": "Фасады и двор",
+      "page": 12,
+      "width": 1241,
+      "height": 1194
+    },
+    {
+      "file": "building.webp",
+      "category": "renders",
+      "title": "Архитектурные детали",
+      "page": 13,
+      "width": 1880,
+      "height": 981
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Парадная",
+      "page": 14,
+      "width": 1247,
+      "height": 980
+    },
+    {
+      "file": "hall-1.webp",
+      "category": "renders",
+      "title": "Общественное пространство",
+      "page": 14,
+      "width": 567,
+      "height": 289
+    },
+    {
+      "file": "hall-2.webp",
+      "category": "renders",
+      "title": "Холл",
+      "page": 14,
+      "width": 566,
+      "height": 289
+    },
+    {
+      "file": "interior-1.webp",
+      "category": "renders",
+      "title": "Пример интерьера",
+      "page": 19,
+      "width": 940,
+      "height": 509
+    },
+    {
+      "file": "interior-2.webp",
+      "category": "renders",
+      "title": "Пример интерьера кухни",
+      "page": 19,
+      "width": 935,
+      "height": 531
+    },
+    {
+      "file": "studio-25-95.webp",
+      "category": "plans",
+      "title": "Студия · 25,95 м²",
+      "page": 15,
+      "width": 267,
+      "height": 604
+    },
+    {
+      "file": "studio-25-96.webp",
+      "category": "plans",
+      "title": "Студия · 25,96 м²",
+      "page": 15,
+      "width": 267,
+      "height": 604
+    },
+    {
+      "file": "studio-28-76.webp",
+      "category": "plans",
+      "title": "Студия · 28,76 м²",
+      "page": 15,
+      "width": 394,
+      "height": 600
+    },
+    {
+      "file": "one-46-29.webp",
+      "category": "plans",
+      "title": "1-комнатная · 46,29 м²",
+      "page": 16,
+      "width": 403,
+      "height": 544
+    },
+    {
+      "file": "one-41-98.webp",
+      "category": "plans",
+      "title": "1-комнатная · 41,98 м²",
+      "page": 16,
+      "width": 401,
+      "height": 556
+    },
+    {
+      "file": "one-59-99.webp",
+      "category": "plans",
+      "title": "1-комнатная · 59,99 м²",
+      "page": 16,
+      "width": 534,
+      "height": 535
+    },
+    {
+      "file": "one-51-04.webp",
+      "category": "plans",
+      "title": "1-комнатная · 51,04 м²",
+      "page": 16,
+      "width": 422,
+      "height": 510
+    },
+    {
+      "file": "two-58-59.webp",
+      "category": "plans",
+      "title": "2-комнатная · 58,59 м²",
+      "page": 17,
+      "width": 318,
+      "height": 442
+    },
+    {
+      "file": "two-69-40.webp",
+      "category": "plans",
+      "title": "2-комнатная · 69,40 м²",
+      "page": 17,
+      "width": 293,
+      "height": 594
+    },
+    {
+      "file": "two-68-71.webp",
+      "category": "plans",
+      "title": "2-комнатная · 68,71 м²",
+      "page": 17,
+      "width": 291,
+      "height": 588
+    },
+    {
+      "file": "two-71-23.webp",
+      "category": "plans",
+      "title": "2-комнатная · 71,23 м²",
+      "page": 18,
+      "width": 544,
+      "height": 386
+    },
+    {
+      "file": "two-71-67.webp",
+      "category": "plans",
+      "title": "2-комнатная · 71,67 м²",
+      "page": 18,
+      "width": 506,
+      "height": 604
+    },
+    {
+      "file": "two-82-82.webp",
+      "category": "plans",
+      "title": "2-комнатная · 82,82 м²",
+      "page": 18,
+      "width": 518,
+      "height": 353
+    },
+    {
+      "file": "two-65-11.webp",
+      "category": "plans",
+      "title": "2-комнатная · 65,11 м²",
+      "page": 18,
+      "width": 474,
+      "height": 436
+    },
+    {
+      "file": "three-90-97-a.webp",
+      "category": "plans",
+      "title": "3-комнатная · 90,97 м² · вариант 1",
+      "page": 19,
+      "width": 401,
+      "height": 603
+    },
+    {
+      "file": "three-90-97-b.webp",
+      "category": "plans",
+      "title": "3-комнатная · 90,97 м² · вариант 2",
+      "page": 19,
+      "width": 403,
+      "height": 604
+    }
+  ]
+}

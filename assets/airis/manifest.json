@@ -1,0 +1,141 @@
+{
+  "source": "Айрис_презентация 29.12.2025.pdf — предоставлена владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура квартала",
+      "page": 10,
+      "width": 1900,
+      "height": 1068
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Двор и фасады",
+      "page": 11,
+      "width": 1900,
+      "height": 1068
+    },
+    {
+      "file": "garden.webp",
+      "category": "renders",
+      "title": "Озеленение приватного двора",
+      "page": 23,
+      "width": 1900,
+      "height": 1068
+    },
+    {
+      "file": "entrance.webp",
+      "category": "renders",
+      "title": "Входная зона",
+      "page": 24,
+      "width": 1900,
+      "height": 857
+    },
+    {
+      "file": "public-roof.webp",
+      "category": "renders",
+      "title": "Общественное пространство на крыше",
+      "page": 25,
+      "width": 1434,
+      "height": 1687
+    },
+    {
+      "file": "sport.webp",
+      "category": "renders",
+      "title": "Пространство для активности",
+      "page": 25,
+      "width": 1329,
+      "height": 1150
+    },
+    {
+      "file": "lounge.webp",
+      "category": "renders",
+      "title": "Общественная гостиная",
+      "page": 26,
+      "width": 1900,
+      "height": 1068
+    },
+    {
+      "file": "playground.webp",
+      "category": "renders",
+      "title": "Детская площадка",
+      "page": 27,
+      "width": 1900,
+      "height": 857
+    },
+    {
+      "file": "terrace.webp",
+      "category": "renders",
+      "title": "Лаундж-зона",
+      "page": 28,
+      "width": 1900,
+      "height": 1068
+    },
+    {
+      "file": "winter-garden.webp",
+      "category": "renders",
+      "title": "Зимний сад",
+      "page": 29,
+      "width": 1434,
+      "height": 1687
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Интерьер общественного пространства",
+      "page": 29,
+      "width": 1329,
+      "height": 1246
+    },
+    {
+      "file": "hall.webp",
+      "category": "renders",
+      "title": "Лобби",
+      "page": 30,
+      "width": 1329,
+      "height": 1246
+    },
+    {
+      "file": "studio.webp",
+      "category": "plans",
+      "title": "Студия",
+      "page": 34,
+      "width": 1385,
+      "height": 1052
+    },
+    {
+      "file": "one-room.webp",
+      "category": "plans",
+      "title": "Однокомнатная квартира",
+      "page": 35,
+      "width": 1384,
+      "height": 1251
+    },
+    {
+      "file": "two-room-1.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 1",
+      "page": 36,
+      "width": 1135,
+      "height": 1366
+    },
+    {
+      "file": "two-room-2.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 2",
+      "page": 37,
+      "width": 1064,
+      "height": 1401
+    },
+    {
+      "file": "three-room.webp",
+      "category": "plans",
+      "title": "Трёхкомнатная квартира",
+      "page": 38,
+      "width": 1449,
+      "height": 1119
+    }
+  ]
+}
