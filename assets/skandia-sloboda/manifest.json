@@ -1,0 +1,117 @@
+{
+  "source": "Квартал в Слободе презентация.pdf",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Панорама квартала",
+      "page": 4,
+      "width": 1900,
+      "height": 1070
+    },
+    {
+      "file": "evening.webp",
+      "category": "renders",
+      "title": "Вечерняя архитектура",
+      "page": 6,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "facade.webp",
+      "category": "renders",
+      "title": "Фасады и первые этажи",
+      "page": 7,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "details.webp",
+      "category": "renders",
+      "title": "Детали архитектуры",
+      "page": 8,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Благоустройство двора",
+      "page": 9,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "playground.webp",
+      "category": "renders",
+      "title": "Игровая площадка",
+      "page": 10,
+      "width": 1418,
+      "height": 792
+    },
+    {
+      "file": "entrance.webp",
+      "category": "renders",
+      "title": "Вход в подъезд",
+      "page": 13,
+      "width": 869,
+      "height": 616
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Интерьер подъезда",
+      "page": 13,
+      "width": 873,
+      "height": 616
+    },
+    {
+      "file": "private-entry.webp",
+      "category": "renders",
+      "title": "Квартиры с отдельным входом",
+      "page": 17,
+      "width": 1900,
+      "height": 1072
+    },
+    {
+      "file": "plan-1.webp",
+      "category": "plans",
+      "title": "Планировка · вариант 1",
+      "page": 22,
+      "width": 918,
+      "height": 1280
+    },
+    {
+      "file": "plan-2.webp",
+      "category": "plans",
+      "title": "Планировка · вариант 2",
+      "page": 22,
+      "width": 935,
+      "height": 1101
+    },
+    {
+      "file": "plan-3.webp",
+      "category": "plans",
+      "title": "Планировка · вариант 3",
+      "page": 22,
+      "width": 857,
+      "height": 991
+    },
+    {
+      "file": "plan-4.webp",
+      "category": "plans",
+      "title": "Планировка · вариант 4",
+      "page": 23,
+      "width": 1691,
+      "height": 1252
+    },
+    {
+      "file": "plan-5.webp",
+      "category": "plans",
+      "title": "Планировка · вариант 5",
+      "page": 23,
+      "width": 1145,
+      "height": 983
+    }
+  ]
+}

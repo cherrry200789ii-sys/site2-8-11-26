@@ -1,0 +1,117 @@
+{
+  "source": "Концепт Озёрный.pdf",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура квартала",
+      "page": 2,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Квартал с высоты",
+      "page": 5,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "evening.webp",
+      "category": "renders",
+      "title": "Вечерний вид",
+      "page": 8,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "entrance-1.webp",
+      "category": "renders",
+      "title": "Входная группа",
+      "page": 10,
+      "width": 1407,
+      "height": 1900
+    },
+    {
+      "file": "entrance-2.webp",
+      "category": "renders",
+      "title": "Интерьер входной группы",
+      "page": 10,
+      "width": 1407,
+      "height": 1900
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Холл дома",
+      "page": 11,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "hall-1.webp",
+      "category": "renders",
+      "title": "Детали общественных пространств",
+      "page": 12,
+      "width": 1407,
+      "height": 1900
+    },
+    {
+      "file": "hall-2.webp",
+      "category": "renders",
+      "title": "Лифтовой холл",
+      "page": 12,
+      "width": 1407,
+      "height": 1900
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Двор для отдыха",
+      "page": 13,
+      "width": 1900,
+      "height": 1069
+    },
+    {
+      "file": "plan-1.webp",
+      "category": "plans",
+      "title": "Студия",
+      "page": 16,
+      "width": 1900,
+      "height": 1900
+    },
+    {
+      "file": "plan-2.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 1",
+      "page": 16,
+      "width": 1900,
+      "height": 1900
+    },
+    {
+      "file": "plan-3.webp",
+      "category": "plans",
+      "title": "Однокомнатная",
+      "page": 16,
+      "width": 1900,
+      "height": 1900
+    },
+    {
+      "file": "plan-4.webp",
+      "category": "plans",
+      "title": "Трёхкомнатная",
+      "page": 17,
+      "width": 1900,
+      "height": 1900
+    },
+    {
+      "file": "plan-5.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 2",
+      "page": 17,
+      "width": 1900,
+      "height": 1900
+    }
+  ]
+}

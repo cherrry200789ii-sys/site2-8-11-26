@@ -5,7 +5,7 @@
   const status = document.querySelector('#map-status');
   const detailsLink = document.querySelector('#map-project-details');
   let projects = [], map, markers = new Map(), selectedId = 'aivazovsky';
-  const ready = fetch('assets/project-map.json?v=20261117-dok').then(response => {
+  const ready = fetch('assets/project-map.json?v=20261117-new3').then(response => {
     if (!response.ok) throw new Error('Map data');
     return response.json();
   }).then(data => { projects = data.projects; return projects; });
