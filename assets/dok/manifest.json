@@ -1,0 +1,197 @@
+{
+  "source": "ЖК Док.pdf — предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура у Туры",
+      "page": 7,
+      "width": 1689,
+      "height": 1193
+    },
+    {
+      "file": "evening.webp",
+      "category": "renders",
+      "title": "Вечерняя архитектура",
+      "page": 8,
+      "width": 1685,
+      "height": 1192
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Панорама проекта",
+      "page": 9,
+      "width": 1685,
+      "height": 1192
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Двор и места отдыха",
+      "page": 12,
+      "width": 1685,
+      "height": 1192
+    },
+    {
+      "file": "lobby-1.webp",
+      "category": "renders",
+      "title": "Интерьер общественного пространства",
+      "page": 14,
+      "width": 1595,
+      "height": 1154
+    },
+    {
+      "file": "lobby-2.webp",
+      "category": "renders",
+      "title": "Дизайн холла",
+      "page": 15,
+      "width": 1567,
+      "height": 1109
+    },
+    {
+      "file": "lobby-3.webp",
+      "category": "renders",
+      "title": "Входная группа",
+      "page": 16,
+      "width": 1570,
+      "height": 1111
+    },
+    {
+      "file": "bikes.webp",
+      "category": "renders",
+      "title": "Пространство для велосипедов",
+      "page": 17,
+      "width": 1686,
+      "height": 1192
+    },
+    {
+      "file": "hall.webp",
+      "category": "renders",
+      "title": "Холл на этаже",
+      "page": 22,
+      "width": 1686,
+      "height": 1192
+    },
+    {
+      "file": "terrace-1.webp",
+      "category": "renders",
+      "title": "Террасы в проекте",
+      "page": 32,
+      "width": 1685,
+      "height": 1192
+    },
+    {
+      "file": "terrace-2.webp",
+      "category": "renders",
+      "title": "Пример обустройства террасы",
+      "page": 33,
+      "width": 1685,
+      "height": 1191
+    },
+    {
+      "file": "plan-1.webp",
+      "category": "plans",
+      "title": "Студия · вариант 1",
+      "page": 26,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-2.webp",
+      "category": "plans",
+      "title": "Однокомнатная · вариант 1",
+      "page": 26,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-3.webp",
+      "category": "plans",
+      "title": "Однокомнатная · вариант 2",
+      "page": 27,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-4.webp",
+      "category": "plans",
+      "title": "Однокомнатная · вариант 3",
+      "page": 27,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-5.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 1",
+      "page": 28,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-6.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 2",
+      "page": 28,
+      "width": 584,
+      "height": 551
+    },
+    {
+      "file": "plan-7.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 3",
+      "page": 29,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-8.webp",
+      "category": "plans",
+      "title": "Двухкомнатная · вариант 4",
+      "page": 29,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-9.webp",
+      "category": "plans",
+      "title": "Трёхкомнатная · вариант 1",
+      "page": 30,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-10.webp",
+      "category": "plans",
+      "title": "Трёхкомнатная · вариант 2",
+      "page": 30,
+      "width": 549,
+      "height": 549
+    },
+    {
+      "file": "plan-11.webp",
+      "category": "plans",
+      "title": "Ситихаус · однокомнатный",
+      "page": 31,
+      "width": 282,
+      "height": 484
+    },
+    {
+      "file": "plan-12.webp",
+      "category": "plans",
+      "title": "Ситихаус · двухкомнатный",
+      "page": 31,
+      "width": 410,
+      "height": 472
+    },
+    {
+      "file": "plan-13.webp",
+      "category": "plans",
+      "title": "Ситихаус · трёхкомнатный",
+      "page": 31,
+      "width": 568,
+      "height": 518
+    }
+  ]
+}
