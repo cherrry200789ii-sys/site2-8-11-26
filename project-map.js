@@ -9,7 +9,7 @@
     if (!response.ok) throw new Error('Map data');
     return response.json();
   }).then(data => { projects = data.projects; return projects; });
-  // Attach an error handler immediately, even if the visitor never opens the map.
+  // Keep data errors visible while the map initializes automatically.
   ready.catch(() => { status.textContent = 'Не удалось загрузить данные карты. Обзоры ЖК доступны в каталоге выше.'; });
   function selectProject(id, moveMap = true) {
     const project = projects.find(item => item.id === id);
@@ -34,7 +34,9 @@
     openProject(selectedId);
   });
   function fitProjects() { map.fitBounds(projects.map(p => [p.lat, p.lng]), { padding: [45, 45], maxZoom: 12 }); }
-  loadButton.addEventListener('click', async () => {
+  async function loadMap() {
+    if (map) return;
+    document.querySelector('#map-gate').hidden = true;
     loadButton.disabled = true; status.textContent = 'Загружаем карту…';
     try {
       await ready;
@@ -71,6 +73,8 @@
       loadButton.disabled = false;
       status.textContent = 'Карта временно недоступна. Выберите ЖК в списке или откройте Яндекс.Карты.';
     }
-  });
+  }
+  loadButton.addEventListener('click', loadMap);
+  loadMap();
   document.querySelector('#map-show-all').addEventListener('click', () => { if (map) fitProjects(); });
 })();
