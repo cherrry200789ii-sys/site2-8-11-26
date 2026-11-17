@@ -1,0 +1,134 @@
+{
+  "source": "motivy_prezentatsiya.pdf — презентация, предоставленная владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура и первые этажи",
+      "page": 19,
+      "width": 1609,
+      "height": 889
+    },
+    {
+      "file": "park.webp",
+      "category": "renders",
+      "title": "Прогулочный парк",
+      "page": 6,
+      "width": 1609,
+      "height": 529
+    },
+    {
+      "file": "shops.webp",
+      "category": "renders",
+      "title": "Кафе и магазины на первых этажах",
+      "page": 7,
+      "width": 1177,
+      "height": 601
+    },
+    {
+      "file": "entrance.webp",
+      "category": "renders",
+      "title": "Вход во двор",
+      "page": 8,
+      "width": 1153,
+      "height": 601
+    },
+    {
+      "file": "gazebo.webp",
+      "category": "renders",
+      "title": "Зона отдыха",
+      "page": 17,
+      "width": 1609,
+      "height": 889
+    },
+    {
+      "file": "playground.webp",
+      "category": "renders",
+      "title": "Игровое пространство",
+      "page": 18,
+      "width": 1609,
+      "height": 889
+    },
+    {
+      "file": "sport.webp",
+      "category": "renders",
+      "title": "Спортивная площадка",
+      "page": 20,
+      "width": 1609,
+      "height": 889
+    },
+    {
+      "file": "hall.webp",
+      "category": "interiors",
+      "title": "Парадная: зона ожидания",
+      "page": 9,
+      "width": 1058,
+      "height": 888
+    },
+    {
+      "file": "welcome.webp",
+      "category": "interiors",
+      "title": "Пространство парадной",
+      "page": 15,
+      "width": 1609,
+      "height": 889
+    },
+    {
+      "file": "stroller.webp",
+      "category": "interiors",
+      "title": "Колясочная",
+      "page": 16,
+      "width": 1609,
+      "height": 889
+    },
+    {
+      "file": "neutral-room.webp",
+      "category": "interiors",
+      "title": "Нейтральная отделка: комната",
+      "page": 12,
+      "width": 1071,
+      "height": 889
+    },
+    {
+      "file": "neutral-bath.webp",
+      "category": "interiors",
+      "title": "Нейтральная отделка: санузел",
+      "page": 12,
+      "width": 541,
+      "height": 889
+    },
+    {
+      "file": "dark-room.webp",
+      "category": "interiors",
+      "title": "Тёмная отделка: комната",
+      "page": 13,
+      "width": 1071,
+      "height": 889
+    },
+    {
+      "file": "dark-bath.webp",
+      "category": "interiors",
+      "title": "Тёмная отделка: санузел",
+      "page": 13,
+      "width": 541,
+      "height": 889
+    },
+    {
+      "file": "light-room.webp",
+      "category": "interiors",
+      "title": "Светлая отделка: комната",
+      "page": 14,
+      "width": 1071,
+      "height": 889
+    },
+    {
+      "file": "light-bath.webp",
+      "category": "interiors",
+      "title": "Светлая отделка: санузел",
+      "page": 14,
+      "width": 541,
+      "height": 889
+    }
+  ],
+  "plans": "В предоставленной презентации нет схем планировок квартир."
+}
