@@ -1,0 +1,138 @@
+{
+  "source": "беринг (2).pdf — предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура и первые этажи",
+      "page": 11,
+      "width": 1153,
+      "height": 757
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Двор и игровые пространства",
+      "page": 13,
+      "width": 1153,
+      "height": 757
+    },
+    {
+      "file": "hall-1.webp",
+      "category": "renders",
+      "title": "Пример интерьера холла",
+      "page": 16,
+      "width": 321,
+      "height": 461
+    },
+    {
+      "file": "hall-2.webp",
+      "category": "renders",
+      "title": "Интерьер парадной",
+      "page": 16,
+      "width": 643,
+      "height": 461
+    },
+    {
+      "file": "hall-3.webp",
+      "category": "renders",
+      "title": "Общественное пространство",
+      "page": 16,
+      "width": 319,
+      "height": 461
+    },
+    {
+      "file": "parking.webp",
+      "category": "renders",
+      "title": "Проект наземного паркинга",
+      "page": 17,
+      "width": 1012,
+      "height": 1041
+    },
+    {
+      "file": "garden.webp",
+      "category": "renders",
+      "title": "Двор ГП-75",
+      "page": 29,
+      "width": 1513,
+      "height": 1041
+    },
+    {
+      "file": "evening.webp",
+      "category": "renders",
+      "title": "Вечерняя архитектура ГП-76",
+      "page": 34,
+      "width": 1514,
+      "height": 1041
+    },
+    {
+      "file": "finish-1.webp",
+      "category": "renders",
+      "title": "Пример отделки · вариант 1",
+      "page": 20,
+      "width": 752,
+      "height": 516
+    },
+    {
+      "file": "finish-2.webp",
+      "category": "renders",
+      "title": "Пример отделки · вариант 2",
+      "page": 20,
+      "width": 753,
+      "height": 516
+    },
+    {
+      "file": "finish-3.webp",
+      "category": "renders",
+      "title": "Пример отделки · вариант 3",
+      "page": 20,
+      "width": 752,
+      "height": 516
+    },
+    {
+      "file": "studio-27-62.webp",
+      "category": "plans",
+      "title": "Студия · 27,62 м² · ГП-76",
+      "page": 35,
+      "width": 381,
+      "height": 248,
+      "clip": [
+        778.3333333333334,
+        334.1666666666667,
+        873.3333333333334,
+        395.83333333333337
+      ],
+      "note": "Отдельная квартира вырезана из схемы секции. Полный план этажа не размещён."
+    },
+    {
+      "file": "studio-34-32.webp",
+      "category": "plans",
+      "title": "Студия · 34,32 м² · ГП-76",
+      "page": 35,
+      "width": 347,
+      "height": 287,
+      "clip": [
+        225.0,
+        358.33333333333337,
+        311.6666666666667,
+        430.0
+      ],
+      "note": "Отдельная квартира вырезана из схемы секции. Полный план этажа не размещён."
+    },
+    {
+      "file": "one-plus-42.webp",
+      "category": "plans",
+      "title": "1+ · 42,00 м² · ГП-76",
+      "page": 35,
+      "width": 390,
+      "height": 331,
+      "clip": [
+        225.0,
+        183.33333333333334,
+        322.5,
+        265.83333333333337
+      ],
+      "note": "Отдельная квартира вырезана из схемы секции. Полный план этажа не размещён."
+    }
+  ]
+}
