@@ -1,0 +1,150 @@
+{
+  "source": "домашний.pdf — предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура района",
+      "page": 21,
+      "width": 1327,
+      "height": 747
+    },
+    {
+      "file": "facades.webp",
+      "category": "renders",
+      "title": "Архитектурные детали",
+      "page": 22,
+      "width": 1047,
+      "height": 943
+    },
+    {
+      "file": "night-1.webp",
+      "category": "renders",
+      "title": "Архитектурная подсветка",
+      "page": 23,
+      "width": 740,
+      "height": 746
+    },
+    {
+      "file": "night-2.webp",
+      "category": "renders",
+      "title": "Вечерний вид на дом",
+      "page": 23,
+      "width": 552,
+      "height": 742
+    },
+    {
+      "file": "boulevard.webp",
+      "category": "renders",
+      "title": "Бульвар Традиций",
+      "page": 27,
+      "width": 1327,
+      "height": 747
+    },
+    {
+      "file": "courtyard-1.webp",
+      "category": "renders",
+      "title": "Благоустройство двора",
+      "page": 30,
+      "width": 873,
+      "height": 418
+    },
+    {
+      "file": "courtyard-2.webp",
+      "category": "renders",
+      "title": "Прогулочное пространство",
+      "page": 30,
+      "width": 905,
+      "height": 488
+    },
+    {
+      "file": "courtyard-3.webp",
+      "category": "renders",
+      "title": "Места для общения",
+      "page": 30,
+      "width": 873,
+      "height": 458
+    },
+    {
+      "file": "courtyard-4.webp",
+      "category": "renders",
+      "title": "Зоны отдыха",
+      "page": 30,
+      "width": 873,
+      "height": 458
+    },
+    {
+      "file": "playground.webp",
+      "category": "renders",
+      "title": "Игровое пространство",
+      "page": 31,
+      "width": 873,
+      "height": 418
+    },
+    {
+      "file": "closed-courtyard.webp",
+      "category": "renders",
+      "title": "Закрытый двор",
+      "page": 35,
+      "width": 1327,
+      "height": 747
+    },
+    {
+      "file": "parking.webp",
+      "category": "renders",
+      "title": "Паркинг",
+      "page": 39,
+      "width": 1781,
+      "height": 943
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Интерьер парадной",
+      "page": 40,
+      "width": 873,
+      "height": 747
+    },
+    {
+      "file": "eco-house.webp",
+      "category": "renders",
+      "title": "Дом «Экологичный»",
+      "page": 76,
+      "width": 1328,
+      "height": 742
+    },
+    {
+      "file": "creative-house.webp",
+      "category": "renders",
+      "title": "Дом «Креативный»",
+      "page": 79,
+      "width": 1328,
+      "height": 740
+    },
+    {
+      "file": "prosperous-house.webp",
+      "category": "renders",
+      "title": "Дом «Процветающий»",
+      "page": 82,
+      "width": 1328,
+      "height": 742
+    },
+    {
+      "file": "conceptual-house.webp",
+      "category": "renders",
+      "title": "Дом «Концептуальный»",
+      "page": 85,
+      "width": 1327,
+      "height": 742
+    },
+    {
+      "file": "innovative-house.webp",
+      "category": "renders",
+      "title": "Дом «Инновационный»",
+      "page": 88,
+      "width": 1327,
+      "height": 742
+    }
+  ],
+  "plansNote": "Самих схем квартир в предоставленной презентации нет."
+}

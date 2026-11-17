@@ -1,0 +1,132 @@
+{
+  "source": "Буклет Гринвуд.pdf — предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура квартала",
+      "page": 6,
+      "width": 1068,
+      "height": 1306
+    },
+    {
+      "file": "park.webp",
+      "category": "renders",
+      "title": "Озеленение двора",
+      "page": 2,
+      "width": 1608,
+      "height": 1302
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Прогулочные пространства",
+      "page": 3,
+      "width": 1608,
+      "height": 1302
+    },
+    {
+      "file": "garden.webp",
+      "category": "renders",
+      "title": "Двор и фасады",
+      "page": 6,
+      "width": 1074,
+      "height": 679
+    },
+    {
+      "file": "facades.webp",
+      "category": "renders",
+      "title": "Архитектурные детали",
+      "page": 6,
+      "width": 1073,
+      "height": 595
+    },
+    {
+      "file": "parking.webp",
+      "category": "renders",
+      "title": "Проект паркинга",
+      "page": 17,
+      "width": 1072,
+      "height": 1302
+    },
+    {
+      "file": "parking-inside.webp",
+      "category": "renders",
+      "title": "Интерьер паркинга",
+      "page": 17,
+      "width": 1072,
+      "height": 679
+    },
+    {
+      "file": "parking-light.webp",
+      "category": "renders",
+      "title": "Освещение паркинга",
+      "page": 17,
+      "width": 1072,
+      "height": 596
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Дизайнерское лобби",
+      "page": 22,
+      "width": 1071,
+      "height": 1306
+    },
+    {
+      "file": "hall.webp",
+      "category": "renders",
+      "title": "Интерьер холла",
+      "page": 22,
+      "width": 579,
+      "height": 1304
+    },
+    {
+      "file": "interior.webp",
+      "category": "renders",
+      "title": "Пример интерьера",
+      "page": 23,
+      "width": 1072,
+      "height": 727
+    },
+    {
+      "file": "bedroom.webp",
+      "category": "renders",
+      "title": "Пример спальни",
+      "page": 23,
+      "width": 1072,
+      "height": 711
+    },
+    {
+      "file": "one-plus.webp",
+      "category": "plans",
+      "title": "1+ · ГП-2.2",
+      "page": 8,
+      "width": 344,
+      "height": 456,
+      "clip": [
+        641,
+        297,
+        727,
+        411
+      ],
+      "note": "Отдельная квартира выделена из схемы этажа; полный план этажа не размещён."
+    },
+    {
+      "file": "studio.webp",
+      "category": "plans",
+      "title": "Студия · 31,80 м² · ГП-2.2",
+      "page": 8,
+      "width": 220,
+      "height": 508,
+      "clip": [
+        641,
+        426,
+        696,
+        553
+      ],
+      "note": "Отдельная квартира выделена из схемы этажа; полный план этажа не размещён."
+    }
+  ],
+  "plansNote": "Отдельные планировки добавлены."
+}

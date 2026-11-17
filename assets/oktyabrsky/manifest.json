@@ -1,0 +1,78 @@
+{
+  "source": "Буклет_Октябрьскии_на_Туре._Дом_7.1.Печать4мм.pdf — предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура дома 7.1",
+      "page": 5,
+      "width": 1211,
+      "height": 1173
+    },
+    {
+      "file": "panorama.webp",
+      "category": "renders",
+      "title": "Панорама квартала",
+      "page": 3,
+      "width": 1225,
+      "height": 1173
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Озеленённый двор",
+      "page": 6,
+      "width": 1211,
+      "height": 1173
+    },
+    {
+      "file": "entrance.webp",
+      "category": "renders",
+      "title": "Входная группа",
+      "page": 7,
+      "width": 1225,
+      "height": 1173
+    },
+    {
+      "file": "parking.webp",
+      "category": "renders",
+      "title": "Подземный паркинг",
+      "page": 8,
+      "width": 1225,
+      "height": 1173
+    },
+    {
+      "file": "shops.webp",
+      "category": "renders",
+      "title": "Коммерческие помещения на первом этаже",
+      "page": 9,
+      "width": 1211,
+      "height": 1173
+    },
+    {
+      "file": "terrace.webp",
+      "category": "renders",
+      "title": "Пример террасы",
+      "page": 10,
+      "width": 1210,
+      "height": 1173
+    },
+    {
+      "file": "bedroom.webp",
+      "category": "renders",
+      "title": "Пример мастер-спальни",
+      "page": 11,
+      "width": 1225,
+      "height": 1173
+    },
+    {
+      "file": "mezzanine.webp",
+      "category": "renders",
+      "title": "Пример интерьера с антресолью",
+      "page": 12,
+      "width": 1225,
+      "height": 1173
+    }
+  ],
+  "plansNote": "Самих схем квартир в предоставленной презентации нет."
+}

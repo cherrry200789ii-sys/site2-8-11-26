@@ -1,0 +1,174 @@
+{
+  "source": "ЖД Концепт.pdf — предоставлен владельцем сайта",
+  "items": [
+    {
+      "file": "architecture.webp",
+      "category": "renders",
+      "title": "Архитектура дома",
+      "page": 2,
+      "width": 1900,
+      "height": 1427
+    },
+    {
+      "file": "lounge.webp",
+      "category": "renders",
+      "title": "Общественная гостиная",
+      "page": 4,
+      "width": 1867,
+      "height": 1878
+    },
+    {
+      "file": "lobby-detail.webp",
+      "category": "renders",
+      "title": "Детали общественного пространства",
+      "page": 6,
+      "width": 733,
+      "height": 869
+    },
+    {
+      "file": "lobby.webp",
+      "category": "renders",
+      "title": "Интерьер лобби",
+      "page": 6,
+      "width": 1900,
+      "height": 845
+    },
+    {
+      "file": "hall.webp",
+      "category": "renders",
+      "title": "Пространство парадной",
+      "page": 6,
+      "width": 1900,
+      "height": 847
+    },
+    {
+      "file": "hall-detail.webp",
+      "category": "renders",
+      "title": "Детали холла",
+      "page": 6,
+      "width": 737,
+      "height": 869
+    },
+    {
+      "file": "interior-1.webp",
+      "category": "renders",
+      "title": "Пример общественного интерьера",
+      "page": 8,
+      "width": 1343,
+      "height": 1779
+    },
+    {
+      "file": "interior-2.webp",
+      "category": "renders",
+      "title": "Зона общения",
+      "page": 8,
+      "width": 1346,
+      "height": 1778
+    },
+    {
+      "file": "courtyard.webp",
+      "category": "renders",
+      "title": "Архитектура и двор",
+      "page": 13,
+      "width": 1339,
+      "height": 1878
+    },
+    {
+      "file": "courtyard-evening.webp",
+      "category": "renders",
+      "title": "Вечерний двор",
+      "page": 13,
+      "width": 1339,
+      "height": 742
+    },
+    {
+      "file": "facades.webp",
+      "category": "renders",
+      "title": "Фасады дома",
+      "page": 14,
+      "width": 1395,
+      "height": 683
+    },
+    {
+      "file": "night.webp",
+      "category": "renders",
+      "title": "Ночная архитектура",
+      "page": 14,
+      "width": 1396,
+      "height": 1148
+    },
+    {
+      "file": "building.webp",
+      "category": "renders",
+      "title": "Вид на дом",
+      "page": 20,
+      "width": 1900,
+      "height": 942
+    },
+    {
+      "file": "walkway.webp",
+      "category": "renders",
+      "title": "Прогулочное пространство",
+      "page": 20,
+      "width": 1746,
+      "height": 779
+    },
+    {
+      "file": "studio-28-35.webp",
+      "category": "plans",
+      "title": "Студия · 28,35 м²",
+      "page": 18,
+      "width": 470,
+      "height": 652
+    },
+    {
+      "file": "studio-23-27.webp",
+      "category": "plans",
+      "title": "Студия · 23,27 м²",
+      "page": 18,
+      "width": 470,
+      "height": 700
+    },
+    {
+      "file": "one-38-63.webp",
+      "category": "plans",
+      "title": "1-комнатная · 38,63 м²",
+      "page": 18,
+      "width": 571,
+      "height": 652
+    },
+    {
+      "file": "one-33-56.webp",
+      "category": "plans",
+      "title": "1-комнатная · 33,56 м²",
+      "page": 18,
+      "width": 571,
+      "height": 690
+    },
+    {
+      "file": "two-53-92.webp",
+      "category": "plans",
+      "title": "2-комнатная · 53,92 м²",
+      "page": 19,
+      "width": 652,
+      "height": 613
+    },
+    {
+      "file": "two-47-55.webp",
+      "category": "plans",
+      "title": "2-комнатная · 47,55 м²",
+      "page": 19,
+      "width": 653,
+      "height": 529
+    },
+    {
+      "file": "three-61-55.webp",
+      "category": "plans",
+      "title": "3-комнатная · 61,55 м²",
+      "page": 19,
+      "width": 765,
+      "height": 507
+    }
+  ],
+  "plansNote": "Отдельные планировки добавлены."
+}
