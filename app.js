@@ -1,4 +1,36 @@
-const CONSENT_VERSION = '2026-11-10';
+// Analytics starts only after acceptance in the site privacy banner.
+const METRIKA_ID = 114364024;
+const ANALYTICS_CHOICE_KEY = 'sedenkova-analytics-choice-v1';
+let metrikaStarted = false;
+function analyticsAllowed() {
+  try { return localStorage.getItem(ANALYTICS_CHOICE_KEY) === 'accepted'; } catch { return false; }
+}
+function startMetrika() {
+  if (metrikaStarted) return;
+  metrikaStarted = true;
+  window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
+  window.ym.l = Date.now();
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://mc.yandex.ru/metrika/tag.js?id=' + METRIKA_ID;
+  document.head.append(script);
+  window.ym(METRIKA_ID, 'init', { ssr: true, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true });
+}
+function setAnalyticsChoice(accepted) {
+  try { localStorage.setItem(ANALYTICS_CHOICE_KEY, accepted ? 'accepted' : 'declined'); } catch { /* Choice still applies for this page. */ }
+  if (accepted) startMetrika();
+  else if (metrikaStarted && typeof window.ym === 'function') {
+    window.ym(METRIKA_ID, 'destruct');
+    metrikaStarted = false;
+  }
+}
+function trackSuccessfulLead() {
+  if (!metrikaStarted || typeof window.ym !== 'function') return;
+  // Never send names, phone numbers or form contents to analytics.
+  try { window.ym(METRIKA_ID, 'reachGoal', 'lead_success'); } catch { /* Analytics must not affect delivery. */ }
+}
+if (analyticsAllowed()) startMetrika();
+const CONSENT_VERSION = '2026-11-19';
 const PRIVACY_STORAGE_KEY = 'sedenkova-privacy-choice';
 const privacyBanner = document.querySelector('#privacy-banner');
 const privacyStatus = document.querySelector('#privacy-status');
@@ -17,9 +49,10 @@ function savePrivacyChoice(status, source) {
   return choice;
 }
 privacyBanner.hidden = Boolean(readPrivacyChoice());
-document.querySelector('#privacy-accept').addEventListener('click', () => savePrivacyChoice('accepted', 'entry'));
+document.querySelector('#privacy-accept').addEventListener('click', () => { savePrivacyChoice('accepted', 'entry'); setAnalyticsChoice(true); });
 document.querySelector('#privacy-decline').addEventListener('click', () => {
   savePrivacyChoice('declined', 'entry');
+  setAnalyticsChoice(false);
   document.querySelector('#request-consent').checked = false;
 });
 document.querySelector('#privacy-settings').addEventListener('click', () => {
@@ -58,6 +91,7 @@ document.querySelector('#selection-form').addEventListener('submit', async event
     });
     const result = await response.json();
     if (!response.ok || result.ok !== true) throw new Error(result.message || 'Не удалось подтвердить отправку.');
+    trackSuccessfulLead();
     status.textContent = 'Заявка отправлена Александре. Спасибо за обращение!';
     form.reset();
   } catch (error) {
